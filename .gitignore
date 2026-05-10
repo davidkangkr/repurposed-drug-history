@@ -1,5 +1,6 @@
 # Tooling
 .claude/
+.claude_backup/
 _workspace/
 vol2_backup/
 
