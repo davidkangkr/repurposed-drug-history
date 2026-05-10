@@ -1,0 +1,12 @@
+# Tooling
+.claude/
+_workspace/
+vol2_backup/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc

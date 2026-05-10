@@ -1,0 +1,249 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.wrap { padding: 1rem 0; font-family: var(--font-sans); }
+.project-title { text-align: center; margin-bottom: 1.5rem; }
+.project-title h1 { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+.project-title p { font-size: 12px; color: var(--color-text-secondary); }
+.phase { border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-lg); margin-bottom: 1rem; overflow: hidden; }
+.phase-header { padding: 12px 16px; display: flex; align-items: center; gap: 10px; }
+.phase-num { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+.phase-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+.phase-where { font-size: 11px; color: var(--color-text-secondary); margin-left: auto; white-space: nowrap; }
+.phase-body { padding: 0 16px 14px; }
+.step-list { display: flex; flex-direction: column; gap: 6px; }
+.step { display: flex; align-items: flex-start; gap: 10px; padding: 8px 10px; border-radius: var(--border-radius-md); background: var(--color-background-secondary); }
+.step-icon { font-size: 13px; min-width: 20px; margin-top: 1px; }
+.step-content { flex: 1; }
+.step-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); }
+.step-desc { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; line-height: 1.5; }
+.step-code { font-size: 11px; font-family: var(--font-mono); color: var(--color-text-info); background: var(--color-background-info); padding: 2px 6px; border-radius: 4px; margin-top: 4px; display: inline-block; }
+.status-done { background: var(--color-background-success); }
+.status-now { background: var(--color-background-warning); border: 0.5px solid var(--color-border-warning); }
+.status-next { background: var(--color-background-secondary); }
+.badge-done { background: #EAF3DE; color: #27500A; }
+.badge-now { background: #FAEEDA; color: #633806; }
+.badge-next { background: var(--color-background-secondary); color: var(--color-text-secondary); border: 0.5px solid var(--color-border-secondary); }
+.phase-done .phase-header { background: var(--color-background-success); }
+.phase-now .phase-header { background: var(--color-background-warning); }
+.phase-next .phase-header { background: var(--color-background-secondary); }
+.divider { display: flex; align-items: center; justify-content: center; padding: 4px 0; color: var(--color-text-tertiary); font-size: 18px; }
+.legend { display: flex; gap: 16px; justify-content: center; margin-bottom: 1rem; flex-wrap: wrap; }
+.legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--color-text-secondary); }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot-done { background: #639922; }
+.dot-now { background: #BA7517; }
+.dot-next { background: var(--color-border-secondary); }
+.cost-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 1rem; }
+.cost-card { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 10px 12px; text-align: center; }
+.cost-label { font-size: 11px; color: var(--color-text-secondary); margin-bottom: 4px; }
+.cost-val { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+.cost-sub { font-size: 10px; color: var(--color-text-tertiary); margin-top: 2px; }
+</style>
+
+<div class="wrap">
+
+<div class="project-title">
+  <h1>항암 용도변경 약물 전자책 프로젝트 로드맵</h1>
+  <p>wikidocs.net 배포 · 3권 시리즈 · 히포크라테스의 친구들</p>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot dot-done"></div>완료</div>
+  <div class="legend-item"><div class="legend-dot dot-now"></div>진행 중 / 다음 단계</div>
+  <div class="legend-item"><div class="legend-dot dot-next"></div>예정</div>
+</div>
+
+<div class="phase phase-done">
+  <div class="phase-header">
+    <span class="phase-num badge-done">1단계 ✅ 완료</span>
+    <span class="phase-title">환경 설정</span>
+    <span class="phase-where">Windows 10 PowerShell</span>
+  </div>
+  <div class="phase-body">
+    <div class="step-list">
+      <div class="step status-done">
+        <span class="step-icon">✅</span>
+        <div class="step-content">
+          <div class="step-title">DeepSeek API 연결</div>
+          <div class="step-desc">settings.json 수정 · Claude Code + DeepSeek V4 Flash 연동 완료</div>
+          <span class="step-code">비용: $0.35 / 41개 파일</span>
+        </div>
+      </div>
+      <div class="step status-done">
+        <span class="step-icon">✅</span>
+        <div class="step-content">
+          <div class="step-title">Harness #11, #63 복사</div>
+          <div class="step-desc">book-publishing + research-assistant 하네스 작업 폴더에 설치</div>
+          <span class="step-code">X:\repurposed-drug-research · X:\repurposed-drug-history</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider">↓</div>
+
+<div class="phase phase-done">
+  <div class="phase-header">
+    <span class="phase-num badge-done">2단계 ✅ 완료</span>
+    <span class="phase-title">41개 약물 자료 조사</span>
+    <span class="phase-where">X:\repurposed-drug-research</span>
+  </div>
+  <div class="phase-body">
+    <div class="step-list">
+      <div class="step status-done">
+        <span class="step-icon">✅</span>
+        <div class="step-content">
+          <div class="step-title">카테고리 A · B · C 전체 조사 완료</div>
+          <div class="step-desc">41개 마크다운 파일 · 5섹션 + 참고문헌(PubMed) 포함</div>
+          <span class="step-code">X:\repurposed-drug-research\data\01_펜벤다졸.md ~ 41_프로바이오틱스.md</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider">↓</div>
+
+<div class="phase phase-now">
+  <div class="phase-header">
+    <span class="phase-num badge-now">3단계 🔥 지금 여기</span>
+    <span class="phase-title">2권 마스터 원고 작성</span>
+    <span class="phase-where">X:\repurposed-drug-history</span>
+  </div>
+  <div class="phase-body">
+    <div class="step-list">
+      <div class="step status-now">
+        <span class="step-icon">🔥</span>
+        <div class="step-content">
+          <div class="step-title">페르소나 + 서문 확정</div>
+          <div class="step-desc">새 컨셉 반영 · 약의 근본 원리 중심 · 독자: 설숙자(50세, 대졸)</div>
+        </div>
+      </div>
+      <div class="step status-now">
+        <span class="step-icon">🔥</span>
+        <div class="step-content">
+          <div class="step-title">샘플 챕터 1개 작성 + David님 확인</div>
+          <div class="step-desc">펜벤다졸 챕터 · 기생충 원리 → 항암 연결 방식 · 확인 후 나머지 진행</div>
+        </div>
+      </div>
+      <div class="step status-next">
+        <span class="step-icon">⬜</span>
+        <div class="step-content">
+          <div class="step-title">나머지 40개 챕터 작성</div>
+          <div class="step-desc">조사 자료 기반 · 이야기 형식 · 카테고리 A → B → C 순서</div>
+        </div>
+      </div>
+      <div class="step status-next">
+        <span class="step-icon">⬜</span>
+        <div class="step-content">
+          <div class="step-title">부록 작성</div>
+          <div class="step-desc">전문가 프로토콜 비교표 · 조 티펜스 / 폴 마릭 / 마크 린턴 등 6인</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider">↓</div>
+
+<div class="phase phase-next">
+  <div class="phase-header">
+    <span class="phase-num badge-next">4단계</span>
+    <span class="phase-title">1권 변환 (고령 보호자)</span>
+    <span class="phase-where">X:\repurposed-drug-history</span>
+  </div>
+  <div class="phase-body">
+    <div class="step-list">
+      <div class="step status-next">
+        <span class="step-icon">⬜</span>
+        <div class="step-content">
+          <div class="step-title">2권 원고 → 1권 페르소나로 변환</div>
+          <div class="step-desc">독자: 전기태(74세) + 박명순(76세) · 30자 이내 짧은 문장 · 일상 비유</div>
+        </div>
+      </div>
+      <div class="step status-next">
+        <span class="step-icon">⬜</span>
+        <div class="step-content">
+          <div class="step-title">1권 서문 + 각 챕터 말미 "가족에게 전하는 한마디" 추가</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider">↓</div>
+
+<div class="phase phase-next">
+  <div class="phase-header">
+    <span class="phase-num badge-next">5단계</span>
+    <span class="phase-title">3권 변환 (전문직 보호자)</span>
+    <span class="phase-where">X:\repurposed-drug-history</span>
+  </div>
+  <div class="phase-body">
+    <div class="step-list">
+      <div class="step status-next">
+        <span class="step-icon">⬜</span>
+        <div class="step-content">
+          <div class="step-title">2권 원고 → 3권 페르소나로 변환</div>
+          <div class="step-desc">독자: 최연옥(50세, 치과의사) · 논문 인용 강화 · 임상시험 단계 명시</div>
+        </div>
+      </div>
+      <div class="step status-next">
+        <span class="step-icon">⬜</span>
+        <div class="step-content">
+          <div class="step-title">약물 상호작용 표 + 딴지봇 비판 섹션 강화</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="divider">↓</div>
+
+<div class="phase phase-next">
+  <div class="phase-header">
+    <span class="phase-num badge-next">6단계</span>
+    <span class="phase-title">검토 + 위키독스 업로드</span>
+    <span class="phase-where">wikidocs.net</span>
+  </div>
+  <div class="phase-body">
+    <div class="step-list">
+      <div class="step status-next">
+        <span class="step-icon">⬜</span>
+        <div class="step-content">
+          <div class="step-title">커뮤니티 멤버 피드백</div>
+          <div class="step-desc">히포크라테스의 친구들 · 1~2명 검토 · 면책조항 문구 확인</div>
+        </div>
+      </div>
+      <div class="step status-next">
+        <span class="step-icon">⬜</span>
+        <div class="step-content">
+          <div class="step-title">위키독스 3권 각각 등록</div>
+          <div class="step-desc">wikidocs.net/book/20 참고 · 챕터별 마크다운 업로드 · 시리즈 연결</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cost-row">
+  <div class="cost-card">
+    <div class="cost-label">자료 조사 비용</div>
+    <div class="cost-val">$0.35</div>
+    <div class="cost-sub">완료 ✅</div>
+  </div>
+  <div class="cost-card">
+    <div class="cost-label">원고 작성 예상</div>
+    <div class="cost-val">$1~3</div>
+    <div class="cost-sub">3권 전체</div>
+  </div>
+  <div class="cost-card">
+    <div class="cost-label">총 예상 비용</div>
+    <div class="cost-val">$5 이내</div>
+    <div class="cost-sub">잔액 $49.64</div>
+  </div>
+</div>
+
+</div>
